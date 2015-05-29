@@ -1,0 +1,15 @@
+span.css-arrow {
+	position: relative;
+	&:after {
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 12px solid red;
+		content: '';
+		display: block;
+		position: absolute;
+			right: 1.5%;
+			top: 4px;
+		z-index: 10;
+	}
+}
