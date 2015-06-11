@@ -1,5 +1,10 @@
 span.css-arrow {
 	position: relative;
+	.ie9 & {
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
 	&:after {
 		border-bottom: 10px solid transparent;
 		border-left: 10px solid transparent;
@@ -11,5 +16,18 @@ span.css-arrow {
 			right: 1.5%;
 			top: 4px;
 		z-index: 10;
+	}
+}
+
+select {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+	&::-ms-expand { // removes select arrow in IE10+
+		display: none;
+	}
+	.ie9 & { // removes select arrow in IE9
+		width: 103% !important;
 	}
 }
